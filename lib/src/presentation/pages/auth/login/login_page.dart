@@ -58,22 +58,27 @@ class LoginPage extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 15),
             child: const TextField(
               decoration: InputDecoration(
-                hintText: 'Email',
-                prefixIcon: Icon(Icons.email),
-              ),
+                  hintText: 'Email',
+                  suffixIcon: Icon(
+                    Icons.email_outlined,
+                  )),
             ),
           ),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 15),
             child: const TextField(
               decoration: InputDecoration(
-                hintText: 'Password',
-                prefixIcon: Icon(Icons.wallet),
-              ),
+                  hintText: 'Password',
+                  suffixIcon: Icon(
+                    Icons.lock_outline,
+                  )),
             ),
           ),
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 30,),
+            margin: const EdgeInsets.symmetric(
+              horizontal: 15,
+              vertical: 30,
+            ),
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {},
