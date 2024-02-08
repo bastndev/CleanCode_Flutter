@@ -12,7 +12,7 @@ class LoginPage extends StatelessWidget {
           ClipPath(
             clipper: WaveClipperTwo(),
             child: Container(
-              height: 300,
+              height: MediaQuery.of(context).size.height * 0.35,
               color: Colors.blue,
               child: Row(
                 children: [
@@ -20,6 +20,14 @@ class LoginPage extends StatelessWidget {
                     'assets/img/gamepad.png',
                     height: 100,
                     width: 150,
+                  ),
+                  const Text(
+                    'Game Store',
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      // color: Colors.,
+                    ),
                   ),
                 ],
               ),
