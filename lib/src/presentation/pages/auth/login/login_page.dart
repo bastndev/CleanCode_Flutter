@@ -8,6 +8,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipPath(
             clipper: WaveClipperTwo(),
@@ -27,13 +28,25 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
-                      // color: Colors.,
                     ),
                   ),
                 ],
               ),
             ),
-          )
+          ),
+          const Text(
+            'Continue with',
+            style: TextStyle(
+              fontSize: 24,
+            ),
+          ),
+          const Text(
+            'Log in',
+            style: TextStyle(
+              fontSize: 26,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ],
       ),
     );
