@@ -16,7 +16,7 @@ class LoginPage extends StatelessWidget {
             clipper: WaveClipperTwo(),
             child: Container(
               height: MediaQuery.of(context).size.height * 0.35,
-              color: Colors.blue,
+              color: BASE_COLOR,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -101,19 +101,26 @@ class LoginPage extends StatelessWidget {
               child: Stack(
                 children: [
                   Container(
+                    height: 55,
                     alignment: Alignment.center,
                     child: const Text(
                       'Log in',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
+                        fontSize: 18,
                       ),
                     ),
                   ),
                   Container(
+                    height: 55,
                     alignment: Alignment.centerRight,
-                    child: const Icon(
-                      Icons.arrow_forward_ios,
-                      color: Colors.white,
+                    child: const CircleAvatar(
+                      radius: 15,
+                      backgroundColor: Colors.black,
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ],
