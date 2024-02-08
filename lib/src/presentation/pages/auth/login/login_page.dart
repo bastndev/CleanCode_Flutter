@@ -78,6 +78,9 @@ class LoginPage extends StatelessWidget {
               onPressed: () {},
               child: const Text('Log in'),
             ),
+          ),
+          const Center(
+            child: Text('Create an account'),
           )
         ],
       ),
