@@ -1,3 +1,4 @@
+import 'package:clean_code/src/presentation/utils/base_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
@@ -7,6 +8,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: BACKGROUND_COLOR,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -40,6 +42,7 @@ class LoginPage extends StatelessWidget {
               'Continue with',
               style: TextStyle(
                 fontSize: 24,
+                color: Colors.white,
               ),
             ),
           ),
@@ -50,6 +53,7 @@ class LoginPage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
+                color: Colors.white,
               ),
             ),
           ),
@@ -58,20 +62,24 @@ class LoginPage extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 15),
             child: const TextField(
               decoration: InputDecoration(
-                  hintText: 'Email',
-                  suffixIcon: Icon(
-                    Icons.email_outlined,
-                  )),
+                label: Text('Email', style: TextStyle(color: Colors.white)),
+                suffixIcon: Icon(
+                  Icons.email_outlined,
+                  color: Colors.white,
+                ),
+              ),
             ),
           ),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 15),
             child: const TextField(
               decoration: InputDecoration(
-                  hintText: 'Password',
-                  suffixIcon: Icon(
-                    Icons.lock_outline,
-                  )),
+                label: Text('Email', style: TextStyle(color: Colors.white)),
+                suffixIcon: Icon(
+                  Icons.lock_outline,
+                  color: Colors.white,
+                ),
+              ),
             ),
           ),
           Container(
@@ -88,7 +96,10 @@ class LoginPage extends StatelessWidget {
           Container(
             alignment: Alignment.center,
             margin: const EdgeInsets.only(bottom: 95),
-            child: const Text('Create an account'),
+            child: const Text(
+              'Create an account',
+              style: TextStyle(color: Colors.white),
+            ),
           )
         ],
       ),
