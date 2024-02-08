@@ -15,6 +15,7 @@ class LoginPage extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.35,
               color: Colors.blue,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Image.asset(
                     'assets/img/gamepad.png',
