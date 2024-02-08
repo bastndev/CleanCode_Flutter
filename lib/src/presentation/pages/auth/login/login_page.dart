@@ -7,7 +7,9 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Column(
-        
+        children: [
+          
+        ],
       ),
     );
   }
