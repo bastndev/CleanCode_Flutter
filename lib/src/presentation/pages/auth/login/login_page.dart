@@ -59,7 +59,7 @@ class LoginPage extends StatelessWidget {
           ),
           const Spacer(),
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 15),
+            margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: const TextField(
               decoration: InputDecoration(
                 label: Text('Email', style: TextStyle(color: Colors.white)),
@@ -72,7 +72,7 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 15),
+            margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: const TextField(
               decoration: InputDecoration(
                 label: Text('Email', style: TextStyle(color: Colors.white)),
