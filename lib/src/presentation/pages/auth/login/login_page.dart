@@ -34,17 +34,23 @@ class LoginPage extends StatelessWidget {
               ),
             ),
           ),
-          const Text(
-            'Continue with',
-            style: TextStyle(
-              fontSize: 24,
+          Container(
+            margin: const EdgeInsets.only(left: 15),
+            child: const Text(
+              'Continue with',
+              style: TextStyle(
+                fontSize: 24,
+              ),
             ),
           ),
-          const Text(
-            'Log in',
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
+          Container(
+            margin: const EdgeInsets.only(left: 15),
+            child: const Text(
+              'Log in',
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ],
