@@ -68,6 +68,7 @@ class LoginPage extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
+              style: TextStyle(color: Colors.white),
             ),
           ),
           Container(
@@ -80,6 +81,7 @@ class LoginPage extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
+              style: TextStyle(color: Colors.white),
             ),
           ),
           Container(
@@ -90,7 +92,32 @@ class LoginPage extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {},
-              child: const Text('Log in'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: BASE_COLOR,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: Stack(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Log in',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.centerRight,
+                    child: const Icon(
+                      Icons.arrow_forward_ios,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Container(
@@ -98,7 +125,7 @@ class LoginPage extends StatelessWidget {
             margin: const EdgeInsets.only(bottom: 95),
             child: const Text(
               'Create an account',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.grey, fontSize: 18),
             ),
           )
         ],
