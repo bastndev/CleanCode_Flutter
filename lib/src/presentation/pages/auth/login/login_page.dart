@@ -12,10 +12,16 @@ class LoginPage extends StatelessWidget {
           ClipPath(
             clipper: WaveClipperTwo(),
             child: Container(
-              height: 200,
+              height: 300,
               color: Colors.blue,
-              child: const Row(
-                children: [],
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/img/gamepad.png',
+                    height: 100,
+                    width: 150,
+                  ),
+                ],
               ),
             ),
           )
