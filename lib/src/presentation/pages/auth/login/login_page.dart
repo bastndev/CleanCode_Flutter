@@ -53,6 +53,7 @@ class LoginPage extends StatelessWidget {
               ),
             ),
           ),
+          const Spacer(),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 15),
             child: const TextField(
@@ -72,15 +73,17 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+            margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 30,),
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {},
               child: const Text('Log in'),
             ),
           ),
-          const Center(
-            child: Text('Create an account'),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.only(bottom: 95),
+            child: const Text('Create an account'),
           )
         ],
       ),
