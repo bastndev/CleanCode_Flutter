@@ -1,4 +1,5 @@
 import 'package:clean_code/src/presentation/utils/base_color.dart';
+import 'package:clean_code/src/presentation/widgets/defaul_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
@@ -90,41 +91,9 @@ class LoginPage extends StatelessWidget {
               vertical: 30,
             ),
             width: double.infinity,
-            child: ElevatedButton(
+            child: DefaultButton(
               onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: BASE_COLOR,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-              child: Stack(
-                children: [
-                  Container(
-                    height: 55,
-                    alignment: Alignment.center,
-                    child: const Text(
-                      'Log in',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: 55,
-                    alignment: Alignment.centerRight,
-                    child: const CircleAvatar(
-                      radius: 15,
-                      backgroundColor: Colors.black,
-                      child: Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              text: 'Log In',
             ),
           ),
           Container(
