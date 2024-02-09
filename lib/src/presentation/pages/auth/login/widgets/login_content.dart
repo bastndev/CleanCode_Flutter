@@ -1,3 +1,4 @@
+import 'package:clean_code/src/presentation/pages/auth/login/widgets/login_textfield_descriptio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
@@ -37,23 +38,13 @@ class LoginContent extends StatelessWidget {
             ),
           ),
         ),
+        const LoginTextFieldDescription(),
         Container(
           margin: const EdgeInsets.only(left: 15),
           child: const Text(
             'Continue with',
             style: TextStyle(
               fontSize: 24,
-              color: Colors.white,
-            ),
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.only(left: 15),
-          child: const Text(
-            'Log in',
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
               color: Colors.white,
             ),
           ),
