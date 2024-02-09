@@ -3,6 +3,8 @@ import 'package:clean_code/src/presentation/widgets/default_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
+import '../../../widgets/defauly_textfield.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -61,34 +63,16 @@ class LoginPage extends StatelessWidget {
           const Spacer(),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-            child: const TextField(
-              decoration: InputDecoration(
-                label: Text(
-                  'Email',
-                  style: TextStyle(color: Colors.white),
-                ),
-                suffixIcon: Icon(
-                  Icons.email_outlined,
-                  color: Colors.white,
-                ),
-              ),
-              style: TextStyle(color: Colors.white),
+            child: DefaultTextField(
+              icon: Icons.email_outlined,
+              label: 'Email',
             ),
           ),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-            child: const TextField(
-              decoration: InputDecoration(
-                label: Text(
-                  'Password',
-                  style: TextStyle(color: Colors.white),
-                ),
-                suffixIcon: Icon(
-                  Icons.lock_outline,
-                  color: Colors.white,
-                ),
-              ),
-              style: TextStyle(color: Colors.white),
+            child: DefaultTextField(
+              icon: Icons.lock_outline,
+              label: 'Password',
             ),
           ),
           Container(

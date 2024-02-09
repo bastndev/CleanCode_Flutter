@@ -1,10 +1,28 @@
 import 'package:flutter/material.dart';
 
 class DefaultTextField extends StatelessWidget {
-  const DefaultTextField({super.key});
+  String label;
+  IconData icon;
+
+  DefaultTextField({
+    required this.icon,
+    required this.label,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return TextField(
+      decoration: InputDecoration(
+        label: Text(
+          label,
+          style: const TextStyle(color: Colors.white),
+        ),
+        suffixIcon: Icon(
+          icon,
+          color: Colors.white,
+        ),
+      ),
+      style: const TextStyle(color: Colors.white),
+    );
   }
 }
