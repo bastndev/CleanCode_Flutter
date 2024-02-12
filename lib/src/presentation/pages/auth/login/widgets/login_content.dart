@@ -1,3 +1,4 @@
+import 'package:clean_code/src/presentation/pages/auth/login/login_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
@@ -5,8 +6,10 @@ import '../../../../utils/base_color.dart';
 import '../../../../widgets/default_button.dart';
 import '../../../../widgets/defauly_textfield.dart';
 
+// ignore: must_be_immutable
 class LoginContent extends StatelessWidget {
-  const LoginContent({super.key});
+  LoginViewModel vm;
+  LoginContent(this.vm);
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +65,9 @@ class LoginContent extends StatelessWidget {
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           child: DefaultTextField(
+            onChange: (value) {
+              vm.changeEmail(value);
+            },
             icon: Icons.email_outlined,
             label: 'Email',
           ),
@@ -69,6 +75,9 @@ class LoginContent extends StatelessWidget {
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           child: DefaultTextField(
+            onChange: (value) {
+              vm.changePassword(value);
+            },
             icon: Icons.lock_outline,
             label: 'Password',
           ),
@@ -80,7 +89,9 @@ class LoginContent extends StatelessWidget {
           ),
           width: double.infinity,
           child: DefaultButton(
-            onPressed: () {},
+            onPressed: () {
+              vm.login();
+            },
             text: 'Log In',
           ),
         ),
