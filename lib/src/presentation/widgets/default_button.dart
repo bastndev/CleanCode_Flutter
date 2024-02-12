@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../utils/base_color.dart';
 
+// ignore: must_be_immutable
 class DefaultButton extends StatelessWidget {
   String text;
   Function() onPressed;
