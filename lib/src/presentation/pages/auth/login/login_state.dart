@@ -8,4 +8,14 @@ class LoginState {
     this.email = const ValidationItem(),
     this.password = const ValidationItem(),
   });
+
+  LoginState copyWith({
+    ValidationItem? email,
+    ValidationItem? password,
+  }) {
+    return LoginState(
+      email: email ?? this.email,
+      password: password ?? this.password,
+    );
+  }
 }
