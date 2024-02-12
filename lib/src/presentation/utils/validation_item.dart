@@ -1,9 +1,9 @@
 class ValidationItem {
-  String value;
-  String error;
+  final String value;
+  final String error;
 
-  ValidationItem({
-    required this.value,
-    required this.error,
+  const ValidationItem({
+    this.value = '',
+    this.error = '',
   });
 }
