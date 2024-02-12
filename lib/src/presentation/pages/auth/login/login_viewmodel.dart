@@ -22,7 +22,7 @@ class LoginViewModel extends ChangeNotifier {
   }
 
   void login(){
-    print('Email: ${_state.email}');
-    print('Password: ${_state.password}');
+    print('Email: ${_state.email.value}');
+    print('Password: ${_state.password.value}');
   }
 }
