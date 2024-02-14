@@ -68,6 +68,7 @@ class LoginContent extends StatelessWidget {
             onChange: (value) {
               vm.changeEmail(value);
             },
+            error:vm.state.email.error,
             icon: Icons.email_outlined,
             label: 'Email',
           ),
@@ -78,6 +79,7 @@ class LoginContent extends StatelessWidget {
             onChange: (value) {
               vm.changePassword(value);
             },
+            error:vm.state.password.error,
             icon: Icons.lock_outline,
             label: 'Password',
           ),
