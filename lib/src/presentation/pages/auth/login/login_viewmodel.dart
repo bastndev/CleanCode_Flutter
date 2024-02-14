@@ -12,7 +12,10 @@ class LoginViewModel extends ChangeNotifier {
 
   //SETTERS
   bool isValid() {
-    if (_state.email.value.isEmpty && _state.password.value.isEmpty) {
+    if (_state.email.value.isEmpty ||
+        _state.email.error.isNotEmpty ||
+        _state.password.value.isEmpty ||
+        _state.password.error.isNotEmpty) {
       return false;
     }
     return true;
@@ -20,7 +23,7 @@ class LoginViewModel extends ChangeNotifier {
 
   void changeEmail(String value) {
     if (value.length >= 3) {
-      _state = _state.copyWith(email: ValidationItem(value: value));
+      _state = _state.copyWith(email: ValidationItem(value: value, error: ''));
     } else {
       _state = _state.copyWith(
           email: const ValidationItem(error: 'Min length is 3'));
@@ -30,7 +33,8 @@ class LoginViewModel extends ChangeNotifier {
 
   void changePassword(String value) {
     if (value.length >= 6) {
-      _state = _state.copyWith(password: ValidationItem(value: value));
+      _state =
+          _state.copyWith(password: ValidationItem(value: value, error: ''));
     } else {
       _state = _state.copyWith(
           password: const ValidationItem(error: 'Min length is 6'));
