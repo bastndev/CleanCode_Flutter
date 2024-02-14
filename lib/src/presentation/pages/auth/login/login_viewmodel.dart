@@ -39,7 +39,11 @@ class LoginViewModel extends ChangeNotifier {
   }
 
   void login() {
-    print('Email: ${_state.email.value}');
-    print('Password: ${_state.password.value}');
+    if (isValid()) {
+      print('Email: ${_state.email.value}');
+      print('Password: ${_state.password.value}');
+    } else {
+      print('The form is not valid');
+    }
   }
 }
