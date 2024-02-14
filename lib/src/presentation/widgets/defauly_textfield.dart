@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class DefaultTextField extends StatelessWidget {
   String label;
+  String error;
   IconData icon;
   Function(String text) onChange;
 
@@ -10,12 +11,13 @@ class DefaultTextField extends StatelessWidget {
     required this.icon,
     required this.label,
     required this.onChange,
+    this.error = '',
   });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      onChanged: (value){
+      onChanged: (value) {
         onChange(value);
       },
       decoration: InputDecoration(
@@ -23,6 +25,7 @@ class DefaultTextField extends StatelessWidget {
           label,
           style: const TextStyle(color: Colors.white),
         ),
+        errorText: error,
         suffixIcon: Icon(
           icon,
           color: Colors.white,
