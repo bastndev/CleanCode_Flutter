@@ -22,11 +22,18 @@ class LoginViewModel extends ChangeNotifier {
   }
 
   void changeEmail(String value) {
-    if (value.length >= 3) {
+    final bool emailFormatValid = RegExp(
+            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+        .hasMatch(value);
+
+    if (!emailFormatValid) {
+      _state =
+          _state.copyWith(email: const ValidationItem(error: 'I no Email'));
+    } else if (value.length >= 6) {
       _state = _state.copyWith(email: ValidationItem(value: value, error: ''));
     } else {
       _state = _state.copyWith(
-          email: const ValidationItem(error: 'Min length is 3'));
+          email: const ValidationItem(error: 'Min length is 6'));
     }
     notifyListeners();
   }
