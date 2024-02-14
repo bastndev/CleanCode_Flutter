@@ -11,15 +11,6 @@ class LoginViewModel extends ChangeNotifier {
   LoginState get state => _state;
 
   //SETTERS
-  bool isValid() {
-    if (_state.email.value.isEmpty ||
-        _state.email.error.isNotEmpty ||
-        _state.password.value.isEmpty ||
-        _state.password.error.isNotEmpty) {
-      return false;
-    }
-    return true;
-  }
 
   void changeEmail(String value) {
     final bool emailFormatValid = RegExp(
@@ -50,7 +41,7 @@ class LoginViewModel extends ChangeNotifier {
   }
 
   void login() {
-    if (isValid()) {
+    if (state.isValid()) {
       print('Email: ${_state.email.value}');
       print('Password: ${_state.password.value}');
     } else {

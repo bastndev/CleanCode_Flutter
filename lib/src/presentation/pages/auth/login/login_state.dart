@@ -18,4 +18,14 @@ class LoginState {
       password: password ?? this.password,
     );
   }
+
+  bool isValid() {
+    if (email.value.isEmpty ||
+        email.error.isNotEmpty ||
+        password.value.isEmpty ||
+        password.error.isNotEmpty) {
+      return false;
+    }
+    return true;
+  }
 }
