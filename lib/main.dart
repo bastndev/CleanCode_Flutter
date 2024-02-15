@@ -1,5 +1,6 @@
 import 'package:clean_code/src/presentation/pages/auth/login/login_page.dart';
 import 'package:clean_code/src/presentation/pages/auth/login/login_viewmodel.dart';
+import 'package:clean_code/src/presentation/pages/auth/register/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         initialRoute: 'login',
         routes: {
           'login': (BuildContext context) => LoginPage(),
+          'register': (BuildContext context) => const RegisterPage(),
         },
       ),
     );

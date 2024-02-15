@@ -9,7 +9,7 @@ import '../../../../widgets/defauly_textfield.dart';
 // ignore: must_be_immutable
 class LoginContent extends StatelessWidget {
   LoginViewModel vm;
-  LoginContent(this.vm);
+  LoginContent(this.vm, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +68,7 @@ class LoginContent extends StatelessWidget {
             onChange: (value) {
               vm.changeEmail(value);
             },
-            error:vm.state.email.error,
+            error: vm.state.email.error,
             icon: Icons.email_outlined,
             label: 'Email',
           ),
@@ -79,7 +79,7 @@ class LoginContent extends StatelessWidget {
             onChange: (value) {
               vm.changePassword(value);
             },
-            error:vm.state.password.error,
+            error: vm.state.password.error,
             icon: Icons.lock_outline,
             label: 'Password',
           ),
@@ -100,9 +100,14 @@ class LoginContent extends StatelessWidget {
         Container(
           alignment: Alignment.center,
           margin: const EdgeInsets.only(bottom: 95),
-          child: const Text(
-            'Create an account',
-            style: TextStyle(color: Colors.grey, fontSize: 18),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, 'register');
+            },
+            child: const Text(
+              'Create an account',
+              style: TextStyle(color: Colors.grey, fontSize: 18),
+            ),
           ),
         )
       ],
