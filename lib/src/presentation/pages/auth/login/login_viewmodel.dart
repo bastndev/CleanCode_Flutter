@@ -11,7 +11,6 @@ class LoginViewModel extends ChangeNotifier {
   LoginState get state => _state;
 
   //SETTERS
-
   void changeEmail(String value) {
     final bool emailFormatValid = RegExp(
             r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
