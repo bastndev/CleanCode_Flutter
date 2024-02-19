@@ -1,15 +1,19 @@
+import 'package:clean_code/src/presentation/pages/auth/register/register_viewmodel.dart';
 import 'package:clean_code/src/presentation/widgets/default_button.dart';
 import 'package:clean_code/src/presentation/widgets/defauly_textfield.dart';
 import 'package:flutter/material.dart';
 
 import 'package:clean_code/src/presentation/utils/base_color.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:provider/provider.dart';
 
 class RegisterContent extends StatelessWidget {
   const RegisterContent({super.key});
 
   @override
   Widget build(BuildContext context) {
+    RegisterViewModel vm = Provider.of<RegisterViewModel>(context);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -81,7 +85,9 @@ class RegisterContent extends StatelessWidget {
           child: DefaultTextField(
             icon: Icons.people_outline,
             label: 'User name',
-            onChange: (value) {},
+            onChange: (value) {
+              vm.changeUserName(value);
+            },
           ),
         ),
         Container(
@@ -89,7 +95,9 @@ class RegisterContent extends StatelessWidget {
           child: DefaultTextField(
             icon: Icons.email_outlined,
             label: 'Email',
-            onChange: (value) {},
+            onChange: (value) {
+              vm.changeEmail(value);
+            },
           ),
         ),
         Container(
@@ -97,7 +105,9 @@ class RegisterContent extends StatelessWidget {
           child: DefaultTextField(
             icon: Icons.lock_outline,
             label: 'Password',
-            onChange: (value) {},
+            onChange: (value) {
+              vm.changePassword(value);
+            },
           ),
         ),
         Container(
@@ -105,7 +115,9 @@ class RegisterContent extends StatelessWidget {
           child: DefaultTextField(
             icon: Icons.lock_outline,
             label: 'Confirm Password',
-            onChange: (value) {},
+            onChange: (value) {
+              vm.changeConfirmPassword(value);
+            },
           ),
         ),
         Container(

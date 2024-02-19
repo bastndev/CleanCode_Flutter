@@ -18,7 +18,7 @@ class LoginViewModel extends ChangeNotifier {
 
     if (!emailFormatValid) {
       _state =
-          _state.copyWith(email: const ValidationItem(error: 'I no Email'));
+          _state.copyWith(email: const ValidationItem(error: 'No Email'));
     } else if (value.length >= 6) {
       _state = _state.copyWith(email: ValidationItem(value: value, error: ''));
     } else {

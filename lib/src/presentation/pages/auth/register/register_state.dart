@@ -25,4 +25,17 @@ class RegisterState {
     }
     return true;
   }
+
+  RegisterState copyWith({
+    ValidationItem? userName,
+    ValidationItem? email,
+    ValidationItem? password,
+    ValidationItem? confirmPassword,
+  }) =>
+      RegisterState(
+        userName: userName ?? this.userName,
+        email: email ?? this.email,
+        password: password ?? this.password,
+        confirmPassword: confirmPassword ?? this.confirmPassword,
+      );
 }

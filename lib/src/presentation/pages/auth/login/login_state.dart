@@ -12,12 +12,11 @@ class LoginState {
   LoginState copyWith({
     ValidationItem? email,
     ValidationItem? password,
-  }) {
-    return LoginState(
-      email: email ?? this.email,
-      password: password ?? this.password,
-    );
-  }
+  }) =>
+      LoginState(
+        email: email ?? this.email,
+        password: password ?? this.password,
+      );
 
   bool isValid() {
     if (email.value.isEmpty ||
