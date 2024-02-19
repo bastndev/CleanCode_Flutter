@@ -63,7 +63,23 @@ class RegisterContent extends StatelessWidget {
             label: 'User name',
             onChange: (value) {},
           ),
-        )
+        ),
+        Container(
+          margin: const EdgeInsets.symmetric(horizontal: 15),
+          child: DefaultTextField(
+            icon: Icons.people,
+            label: 'Email',
+            onChange: (value) {},
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.symmetric(horizontal: 15),
+          child: DefaultTextField(
+            icon: Icons.people,
+            label: 'Password',
+            onChange: (value) {},
+          ),
+        ),
       ],
     );
   }
