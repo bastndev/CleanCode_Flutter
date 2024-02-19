@@ -20,7 +20,8 @@ class RegisterState {
         password.value.isEmpty ||
         password.error.isEmpty ||
         confirmPassword.value.isEmpty ||
-        confirmPassword.error.isEmpty) {
+        confirmPassword.error.isEmpty ||
+        (password.value != confirmPassword.value)) {
       return false;
     }
     return true;

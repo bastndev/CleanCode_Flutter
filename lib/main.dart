@@ -1,6 +1,7 @@
 import 'package:clean_code/src/presentation/pages/auth/login/login_page.dart';
 import 'package:clean_code/src/presentation/pages/auth/login/login_viewmodel.dart';
 import 'package:clean_code/src/presentation/pages/auth/register/register_page.dart';
+import 'package:clean_code/src/presentation/pages/auth/register/register_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => LoginViewModel(),)
+        ChangeNotifierProvider(create: (context) => LoginViewModel(),),
+        ChangeNotifierProvider(create: (context) => RegisterViewModel(),),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

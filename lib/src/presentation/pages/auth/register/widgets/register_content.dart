@@ -1,19 +1,19 @@
+import 'package:flutter/material.dart';
 import 'package:clean_code/src/presentation/pages/auth/register/register_viewmodel.dart';
 import 'package:clean_code/src/presentation/widgets/default_button.dart';
 import 'package:clean_code/src/presentation/widgets/defauly_textfield.dart';
-import 'package:flutter/material.dart';
 
 import 'package:clean_code/src/presentation/utils/base_color.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
-import 'package:provider/provider.dart';
+// import 'package:provider/provider.dart';
 
+// ignore: must_be_immutable
 class RegisterContent extends StatelessWidget {
-  const RegisterContent({super.key});
+  RegisterViewModel vm;
+  RegisterContent(this.vm, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    RegisterViewModel vm = Provider.of<RegisterViewModel>(context);
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -84,6 +84,7 @@ class RegisterContent extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 15),
           child: DefaultTextField(
             icon: Icons.people_outline,
+            error: vm.state.userName.error,
             label: 'User name',
             onChange: (value) {
               vm.changeUserName(value);
@@ -94,6 +95,7 @@ class RegisterContent extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 15),
           child: DefaultTextField(
             icon: Icons.email_outlined,
+            error: vm.state.email.error,
             label: 'Email',
             onChange: (value) {
               vm.changeEmail(value);
@@ -104,6 +106,7 @@ class RegisterContent extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 15),
           child: DefaultTextField(
             icon: Icons.lock_outline,
+            error: vm.state.password.error,
             label: 'Password',
             onChange: (value) {
               vm.changePassword(value);
@@ -114,6 +117,7 @@ class RegisterContent extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 15),
           child: DefaultTextField(
             icon: Icons.lock_outline,
+            error: vm.state.confirmPassword.error,
             label: 'Confirm Password',
             onChange: (value) {
               vm.changeConfirmPassword(value);
@@ -126,7 +130,9 @@ class RegisterContent extends StatelessWidget {
               const EdgeInsets.only(right: 15, left: 15, bottom: 40, top: 15),
           child: DefaultButton(
             text: 'Save',
-            onPressed: () {},
+            onPressed: () {
+              vm.register();
+            },
           ),
         )
       ],
