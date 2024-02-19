@@ -59,7 +59,7 @@ class RegisterContent extends StatelessWidget {
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 15),
           child: DefaultTextField(
-            icon: Icons.people,
+            icon: Icons.people_outline,
             label: 'User name',
             onChange: (value) {},
           ),
@@ -67,7 +67,7 @@ class RegisterContent extends StatelessWidget {
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 15),
           child: DefaultTextField(
-            icon: Icons.people,
+            icon: Icons.email_outlined,
             label: 'Email',
             onChange: (value) {},
           ),
@@ -75,8 +75,16 @@ class RegisterContent extends StatelessWidget {
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 15),
           child: DefaultTextField(
-            icon: Icons.people,
+            icon: Icons.lock_outline,
             label: 'Password',
+            onChange: (value) {},
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.symmetric(horizontal: 15),
+          child: DefaultTextField(
+            icon: Icons.lock_outline,
+            label: 'Confirm Password',
             onChange: (value) {},
           ),
         ),
