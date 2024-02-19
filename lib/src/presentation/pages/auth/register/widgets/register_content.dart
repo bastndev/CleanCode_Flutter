@@ -1,3 +1,4 @@
+import 'package:clean_code/src/presentation/widgets/default_button.dart';
 import 'package:clean_code/src/presentation/widgets/defauly_textfield.dart';
 import 'package:flutter/material.dart';
 
@@ -17,27 +18,45 @@ class RegisterContent extends StatelessWidget {
           child: Container(
             height: MediaQuery.of(context).size.height * 0.27,
             color: BASE_COLOR,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            child: Stack(
+              alignment: Alignment.center,
               children: [
-                Image.asset(
-                  'assets/img/gamepad.png',
-                  height: 100,
-                  width: 100,
-                ),
-                const Text(
-                  'Game Store',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
+                Container(
+                  alignment: Alignment.topLeft,
+                  margin: const EdgeInsets.only(top: 50, left: 15),
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: const Icon(
+                      Icons.arrow_back,
+                      size: 32,
+                    ),
                   ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Image.asset(
+                      'assets/img/gamepad.png',
+                      height: 100,
+                      width: 100,
+                    ),
+                    const Text(
+                      'Game Store',
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
           ),
         ),
         Container(
-          margin: const EdgeInsets.symmetric(horizontal: 15),
+          margin: const EdgeInsets.only(left: 15, top: 15),
           child: const Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -56,6 +75,7 @@ class RegisterContent extends StatelessWidget {
             ],
           ),
         ),
+        const Spacer(),
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 15),
           child: DefaultTextField(
@@ -88,6 +108,15 @@ class RegisterContent extends StatelessWidget {
             onChange: (value) {},
           ),
         ),
+        Container(
+          width: double.infinity,
+          margin:
+              const EdgeInsets.only(right: 15, left: 15, bottom: 40, top: 15),
+          child: DefaultButton(
+            text: 'Save',
+            onPressed: () {},
+          ),
+        )
       ],
     );
   }
