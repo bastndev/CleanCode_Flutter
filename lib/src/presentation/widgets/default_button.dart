@@ -7,6 +7,7 @@ class DefaultButton extends StatelessWidget {
   Function() onPressed;
 
   DefaultButton({
+    super.key,
     required this.text,
     required this.onPressed,
   });
