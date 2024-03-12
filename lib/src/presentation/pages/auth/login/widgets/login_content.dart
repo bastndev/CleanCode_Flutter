@@ -99,7 +99,7 @@ class LoginContent extends StatelessWidget {
         ),
         Container(
           alignment: Alignment.center,
-          margin: const EdgeInsets.only(bottom: 95),
+          margin: const EdgeInsets.only(bottom: 70),
           child: GestureDetector(
             onTap: () {
               Navigator.pushNamed(context, 'register');
