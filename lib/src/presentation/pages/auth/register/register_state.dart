@@ -14,13 +14,13 @@ class RegisterState {
 
   bool isValid() {
     if (userName.value.isEmpty ||
-        userName.error.isEmpty ||
+        userName.error.isNotEmpty ||
         email.value.isEmpty ||
-        email.error.isEmpty ||
+        email.error.isNotEmpty ||
         password.value.isEmpty ||
-        password.error.isEmpty ||
+        password.error.isNotEmpty ||
         confirmPassword.value.isEmpty ||
-        confirmPassword.error.isEmpty ||
+        confirmPassword.error.isNotEmpty ||
         (password.value != confirmPassword.value)) {
       return false;
     }

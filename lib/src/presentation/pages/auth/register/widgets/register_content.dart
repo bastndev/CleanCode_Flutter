@@ -122,7 +122,7 @@ class RegisterContent extends StatelessWidget {
             icon: Icons.lock_outline,
             error: vm.state.confirmPassword.error,
             label: 'Confirm Password',
-            obscureText: true,
+            obscureText:true,
             onChange: (value) {
               vm.changeConfirmPassword(value);
             },
