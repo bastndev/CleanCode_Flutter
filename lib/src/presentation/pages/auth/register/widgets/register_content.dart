@@ -62,18 +62,20 @@ class RegisterContent extends StatelessWidget {
         Container(
           margin: const EdgeInsets.only(left: 15, top: 15),
           child: const Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Continue with',
                 style: TextStyle(
                   color: Colors.white,
+                  fontSize: 25,
                 ),
               ),
               Text(
                 'Log up',
                 style: TextStyle(
                   color: Colors.white,
+                  fontSize: 20,
                 ),
               ),
             ],
