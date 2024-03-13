@@ -27,14 +27,14 @@ class RegisterContent extends StatelessWidget {
               children: [
                 Container(
                   alignment: Alignment.topLeft,
-                  margin: const EdgeInsets.only(top: 50, left: 15),
+                  margin: const EdgeInsets.only(top: 40, left: 5),
                   child: IconButton(
                     onPressed: () {
                       Navigator.pop(context);
                     },
                     icon: const Icon(
-                      Icons.arrow_back,
-                      size: 32,
+                      Icons.arrow_back_ios,
+                      size: 25,
                     ),
                   ),
                 ),
