@@ -81,6 +81,7 @@ class LoginContent extends StatelessWidget {
             },
             error: vm.state.password.error,
             icon: Icons.lock_outline,
+            obscureText: true,
             label: 'Password',
           ),
         ),
